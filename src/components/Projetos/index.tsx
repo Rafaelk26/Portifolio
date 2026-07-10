@@ -1,11 +1,14 @@
 "use client";
 import { useState } from 'react';
+import { Cards } from './Cards';
 
-type Category = "all" | "sites" | "systems" | "app";
+import Photo from '../../../public/image.png';
+
+export type Category = "Todos" | "Sites" | "Sistemas" | "Aplicativos";
 
 export function Projetos(){
 
-    const [selected, setSelected] = useState<Category>("all");
+    const [selected, setSelected] = useState<Category>("Todos");
 
     return(
         <>
@@ -20,7 +23,7 @@ export function Projetos(){
                     {/* Select type project */}
                     <div className="mt-8 flex gap-4">
                         <button
-                        onClick={()=> setSelected("all")}
+                        onClick={()=> setSelected("Todos")}
                         className={`
                         w-40 h-10 rounded-md border transition-all
                         hover:cursor-pointer hover:scale-105
@@ -28,7 +31,7 @@ export function Projetos(){
                         hover:shadow-[#6cf74d]/30 hover:shadow-lg
 
                         ${
-                        selected === "all"
+                        selected === "Todos"
                             ? "bg-[#092C01] border-[#52C538] text-white"
                             : "bg-[#101319] border-[#242424] text-white"
                         }
@@ -37,7 +40,7 @@ export function Projetos(){
                         </button>
 
                         <button
-                        onClick={()=> setSelected("sites")}
+                        onClick={()=> setSelected("Sites")}
                         className={`
                         w-40 h-10 rounded-md border transition-all
                         hover:cursor-pointer hover:scale-105
@@ -45,7 +48,7 @@ export function Projetos(){
                         hover:shadow-[#6cf74d]/30 hover:shadow-lg
 
                         ${
-                        selected === "sites"
+                        selected === "Sites"
                             ? "bg-[#092C01] border-[#52C538] text-white"
                             : "bg-[#101319] border-[#242424] text-white"
                         }
@@ -54,7 +57,7 @@ export function Projetos(){
                         </button>
 
                         <button
-                        onClick={()=> setSelected("systems")}
+                        onClick={()=> setSelected("Sistemas")}
                         className={`
                         w-40 h-10 rounded-md border transition-all
                         hover:cursor-pointer hover:scale-105
@@ -62,7 +65,7 @@ export function Projetos(){
                         hover:shadow-[#6cf74d]/30 hover:shadow-lg
 
                         ${
-                        selected === "systems"
+                        selected === "Sistemas"
                             ? "bg-[#092C01] border-[#52C538] text-white"
                             : "bg-[#101319] border-[#242424] text-white"
                         }
@@ -71,7 +74,7 @@ export function Projetos(){
                         </button>
 
                         <button
-                        onClick={()=> setSelected("app")}
+                        onClick={()=> setSelected("Aplicativos")}
                         className={`
                         w-40 h-10 rounded-md border transition-all
                         hover:cursor-pointer hover:scale-105
@@ -79,7 +82,7 @@ export function Projetos(){
                         hover:shadow-[#6cf74d]/30 hover:shadow-lg
 
                         ${
-                        selected === "app"
+                        selected === "Aplicativos"
                             ? "bg-[#092C01] border-[#52C538] text-white"
                             : "bg-[#101319] border-[#242424] text-white"
                         }
@@ -90,8 +93,42 @@ export function Projetos(){
                 </section>
 
                 {/* Cards Projects */}
-                <section className="w-full flex gap-6 mt-16">
-                    
+                <section className="w-full grid grid-cols-4 gap-6 mt-16">
+                    <Cards 
+                        key={1}
+                        nomeProjeto='Projeto 1'
+                        descricaoProjeto='Lorem Ipsum is simply dummy text of the printing and typesetting.'
+                        srcProjeto={Photo}
+                        categoriaProjeto='Sites'
+                        linkProjeto='/'
+                    />
+
+                    <Cards 
+                        key={2}
+                        nomeProjeto='Projeto 2'
+                        descricaoProjeto='Lorem Ipsum is simply dummy text of the printing and typesetting.'
+                        srcProjeto={Photo}
+                        categoriaProjeto='Sites'
+                        linkProjeto='/'
+                    />
+
+                    <Cards 
+                        key={3}
+                        nomeProjeto='Projeto 3'
+                        descricaoProjeto='Lorem Ipsum is simply dummy text of the printing and typesetting.'
+                        srcProjeto={Photo}
+                        categoriaProjeto='Sites'
+                        linkProjeto='/'
+                    />
+
+                    <Cards 
+                        key={4}
+                        nomeProjeto='Projeto 4'
+                        descricaoProjeto='Lorem Ipsum is simply dummy text of the printing and typesetting.'
+                        srcProjeto={Photo}
+                        categoriaProjeto='Sites'
+                        linkProjeto='/'
+                    />
                 </section>
             </main>
         </>
