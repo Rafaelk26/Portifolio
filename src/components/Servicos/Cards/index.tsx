@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "motion/react";
 import { RiArrowRightLongLine } from "react-icons/ri";
 import { SlScreenDesktop } from "react-icons/sl";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
@@ -18,7 +21,16 @@ interface CardsProps{
 export function Cards({ title, description, icon, item1, item2, item3, item4, link }: CardsProps){
     return(
         <>
-            <div className="max-w-1/3 w-full bg-[#0c121d] py-10 px-6 rounded-2xl">
+            <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y:0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ 
+                duration: 0.7,
+                ease: "easeOut",
+            }}
+            className="w-full bg-[#0c121d] py-10 px-3 rounded-2xl 
+            md:max-w-1/3 md:py-10 md:px-6">
                 <div className="flex gap-6">
                     {icon === "SlScreenDesktop" && <SlScreenDesktop size={70} color="#52C538"/>}
                     {icon === "HiOutlineShoppingBag" && <HiOutlineShoppingBag size={70} color="#52C538"/>}
@@ -43,7 +55,7 @@ export function Cards({ title, description, icon, item1, item2, item3, item4, li
                         </Link>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </>
     )
 }

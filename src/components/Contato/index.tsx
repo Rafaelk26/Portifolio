@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import { Button1 } from "../Button1";
+import { motion } from "motion/react";
 
 import DesignerArt from '../../../public/Whatsapp.png';
 
@@ -9,13 +12,21 @@ export function Contato(){
             <main className="flex flex-col max-w-7xl w-full gap-4 mx-auto my-20 items-center justify-center
             md:flex-row">
                 {/* Image */}
-                <section className="w-full flex flex-col items-center md:flex-row">
+                <motion.section
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y:0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ 
+                    duration: 0.7,
+                    ease: "easeIn",
+                }}
+                className="w-full flex flex-col items-center md:flex-row md:justify-center">
                     <Image 
-                    className="w-80 h-80 md:w-full md:h-full object-cover"
+                    className="w-80 h-80 md:max-w-10/12 md:max-h-10/12 md:w-full md:h-full object-cover"
                     src={DesignerArt}
                     alt="Desktops Art"
                     />
-                </section>
+                </motion.section>
 
                 {/* Writes */}
                 <section className="w-full flex flex-col gap-6 items-center md:justify-center md:items-start">

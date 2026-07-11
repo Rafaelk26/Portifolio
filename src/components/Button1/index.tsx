@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 export function Button1(){
     return(
         <>
-            <Link href={""}>
+            <Link href={"https://wa.link/5yzcb4"} target="_blank">
                 <button 
                 className="bg-transparent font-poppins font-bold py-3 px-6 border border-white/50 rounded-lg flex gap-4
                 hover:cursor-pointer hover:scale-105 transition-all hover:bg-[#52C538] hover:text-[#eeffea] hover:border-[#52C538]
@@ -13,7 +13,6 @@ export function Button1(){
                     <FaWhatsapp className="fill-current" size={24} />
                 </button>
             </Link>
-            
         </>
     )
 }

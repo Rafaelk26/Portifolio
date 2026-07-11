@@ -14,14 +14,16 @@ export function Projetos(){
         <>
             <main className="flex flex-col items-center max-w-7xl w-full mx-auto my-20">
                 {/* Title Projects */}
-                <section className="flex flex-col items-center">
+                <section className="w-full flex flex-col items-center">
                     <h1 className="font-light font-poppins text-[#52C538]">PORTIFÓLIO</h1>
-                    <span className="font-bold font-poppins text-white text-5xl text-center">
+                    <span className="font-bold font-poppins text-4xl text-white text-center
+                    md:text-5xl">
                         Projetos que geram resultados
                     </span>
 
                     {/* Select type project */}
-                    <div className="mt-8 flex gap-4">
+                    <div className="w-full ms-6 mt-8 flex gap-4 overflow-y-hidden scrollbar-hide
+                    md:w-fit md:overflow-hidden md:p-6 md:mt-2 md:ms-0">
                         <button
                         onClick={()=> setSelected("Todos")}
                         className={`
@@ -93,42 +95,95 @@ export function Projetos(){
                 </section>
 
                 {/* Cards Projects */}
-                <section className="w-full grid grid-cols-4 gap-6 mt-16">
-                    <Cards 
-                        key={1}
-                        nomeProjeto='Projeto 1'
-                        descricaoProjeto='Lorem Ipsum is simply dummy text of the printing and typesetting.'
-                        srcProjeto={Photo}
-                        categoriaProjeto='Sites'
-                        linkProjeto='/'
-                    />
+                <section className="w-10/12 grid grid-cols-1 items-center gap-6 mt-16 
+                md:grid-cols-4 md:w-full md:mt-6">
+                    {selected === "Todos" && (
+                        <>
+                            <Cards 
+                                key={5}
+                                nomeProjeto='Projeto 1'
+                                descricaoProjeto='Lorem Ipsum is simply dummy text of the printing and typesetting.'
+                                srcProjeto={Photo}
+                                categoriaProjeto='Sites'
+                                linkProjeto='/'
+                            />
 
-                    <Cards 
-                        key={2}
-                        nomeProjeto='Projeto 2'
-                        descricaoProjeto='Lorem Ipsum is simply dummy text of the printing and typesetting.'
-                        srcProjeto={Photo}
-                        categoriaProjeto='Sites'
-                        linkProjeto='/'
-                    />
+                            <Cards 
+                                key={6}
+                                nomeProjeto='Projeto 2'
+                                descricaoProjeto='Lorem Ipsum is simply dummy text of the printing and typesetting.'
+                                srcProjeto={Photo}
+                                categoriaProjeto='Sites'
+                                linkProjeto='/'
+                            />
 
-                    <Cards 
-                        key={3}
-                        nomeProjeto='Projeto 3'
-                        descricaoProjeto='Lorem Ipsum is simply dummy text of the printing and typesetting.'
-                        srcProjeto={Photo}
-                        categoriaProjeto='Sites'
-                        linkProjeto='/'
-                    />
+                            <Cards 
+                                key={7}
+                                nomeProjeto='Projeto 3'
+                                descricaoProjeto='Lorem Ipsum is simply dummy text of the printing and typesetting.'
+                                srcProjeto={Photo}
+                                categoriaProjeto='Sistemas'
+                                linkProjeto='/'
+                            />
 
-                    <Cards 
-                        key={4}
-                        nomeProjeto='Projeto 4'
-                        descricaoProjeto='Lorem Ipsum is simply dummy text of the printing and typesetting.'
-                        srcProjeto={Photo}
-                        categoriaProjeto='Sites'
-                        linkProjeto='/'
-                    />
+                            <Cards 
+                                key={8}
+                                nomeProjeto='Projeto 4'
+                                descricaoProjeto='Lorem Ipsum is simply dummy text of the printing and typesetting.'
+                                srcProjeto={Photo}
+                                categoriaProjeto='Aplicativos'
+                                linkProjeto='/'
+                            />
+                        </>
+                    )}
+
+                    { selected === "Sites" && (
+                        <>
+                            <Cards 
+                                key={1}
+                                nomeProjeto='Projeto 1'
+                                descricaoProjeto='Lorem Ipsum is simply dummy text of the printing and typesetting.'
+                                srcProjeto={Photo}
+                                categoriaProjeto='Sites'
+                                linkProjeto='/'
+                            />
+
+                            <Cards 
+                                key={2}
+                                nomeProjeto='Projeto 2'
+                                descricaoProjeto='Lorem Ipsum is simply dummy text of the printing and typesetting.'
+                                srcProjeto={Photo}
+                                categoriaProjeto='Sites'
+                                linkProjeto='/'
+                            />
+                        </>
+                    )}
+
+                    { selected === "Sistemas" && (
+                        <>
+                            <Cards 
+                                key={3}
+                                nomeProjeto='Projeto 3'
+                                descricaoProjeto='Lorem Ipsum is simply dummy text of the printing and typesetting.'
+                                srcProjeto={Photo}
+                                categoriaProjeto='Sistemas'
+                                linkProjeto='/'
+                            />
+                        </>
+                    )}
+
+                    { selected === "Aplicativos" && (
+                        <>
+                            <Cards 
+                                key={4}
+                                nomeProjeto='Projeto 4'
+                                descricaoProjeto='Lorem Ipsum is simply dummy text of the printing and typesetting.'
+                                srcProjeto={Photo}
+                                categoriaProjeto='Aplicativos'
+                                linkProjeto='/'
+                            />
+                        </>
+                    )}
                 </section>
             </main>
         </>

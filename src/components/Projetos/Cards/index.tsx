@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "motion/react";
 import { RiArrowRightLongLine } from 'react-icons/ri';
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
@@ -13,7 +16,15 @@ interface CardsProps {
 export function Cards({ nomeProjeto, descricaoProjeto, categoriaProjeto, srcProjeto, linkProjeto }: CardsProps){
     return(
         <>
-            <div className='w-full p-4 border border-[#242424] bg-[#0C121D] rounded-xl'>
+            <motion.div 
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y:0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ 
+                duration: 0.8,
+                ease: "easeOut",
+            }}
+            className='w-full p-4 border border-[#242424] bg-[#0C121D] rounded-xl from:translate-x-0 to:translate-x-full'>
                 <Image 
                 className='object-cover w-full h-56 rounded-xl'
                 width={0}
@@ -35,7 +46,7 @@ export function Cards({ nomeProjeto, descricaoProjeto, categoriaProjeto, srcProj
                         <RiArrowRightLongLine className="fill-current" size={24} />
                     </button>
                 </Link>
-            </div>
+            </motion.div>
         </>
     )
 }
