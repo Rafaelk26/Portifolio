@@ -39,7 +39,7 @@ export function Cards({ nomeProjeto, descricaoProjeto, categoriaProjeto, srcProj
 
                 <span className='font-poppins font-light bold text-sm'>{descricaoProjeto}</span>
 
-                <Link href={linkProjeto} className='w-max'>
+                <Link href={linkProjeto} target="_blank" className='w-max'>
                     <button className="mt-4 flex gap-3 text-[#52C538] transition-all
                     hover:text-white hover:cursor-pointer">
                         <span className="text-normal font-poppins font-light">Ver Projeto</span>

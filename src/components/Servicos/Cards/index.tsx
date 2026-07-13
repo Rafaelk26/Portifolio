@@ -36,10 +36,10 @@ export function Cards({ title, description, icon, item1, item2, item3, item4, li
                     {icon === "HiOutlineShoppingBag" && <HiOutlineShoppingBag size={70} color="#52C538"/>}
                     {icon === "SlScreenSmartphone" && <SlScreenSmartphone size={70} color="#52C538"/>}
                     <div className="w-full">
-                        <h1 className="font-poppins font-bold text-2xl">{title}</h1>
-                        <span className="font-poppins font-light text-sm">{description}</span>
+                        <h1 className="font-poppins font-bold text-2xl text-[#52C538]">{title}</h1>
+                        <span className="font-poppins font-light text-sm text-white">{description}</span>
 
-                        <ul className="list-disc ml-4 my-6 font-poppins font-light text-sm flex flex-col gap-1">
+                        <ul className="list-disc ml-4 my-6 font-poppins font-light text-sm text-white flex flex-col gap-1">
                             <li>{item1}</li>
                             <li>{item2}</li>
                             <li>{item3}</li>

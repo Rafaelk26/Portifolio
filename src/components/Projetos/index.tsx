@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { Cards } from './Cards';
 
 import Photo from '../../../public/image.png';
+import Project1 from '../../../public/1.webp';
+import Project3 from '../../../public/3.webp';
 
 export type Category = "Todos" | "Sites" | "Sistemas" | "Aplicativos";
 
@@ -101,11 +103,11 @@ export function Projetos(){
                         <>
                             <Cards 
                                 key={5}
-                                nomeProjeto='Projeto 1'
-                                descricaoProjeto='Lorem Ipsum is simply dummy text of the printing and typesetting.'
-                                srcProjeto={Photo}
+                                nomeProjeto='ADAC Church'
+                                descricaoProjeto='Destinado a uma igreja local da cidade onde apresenta a ideia da igreja focada em visão celular.'
+                                srcProjeto={Project1}
                                 categoriaProjeto='Sites'
-                                linkProjeto='/'
+                                linkProjeto='https://adacchurch.vercel.app/'
                             />
 
                             <Cards 
@@ -119,11 +121,11 @@ export function Projetos(){
 
                             <Cards 
                                 key={7}
-                                nomeProjeto='Projeto 3'
-                                descricaoProjeto='Lorem Ipsum is simply dummy text of the printing and typesetting.'
-                                srcProjeto={Photo}
+                                nomeProjeto='Incell System'
+                                descricaoProjeto='Sistema SaaS de gerenciamento para a igreja onde efetua relatórios, marca reuniões, deleta dados.'
+                                srcProjeto={Project3}
                                 categoriaProjeto='Sistemas'
-                                linkProjeto='/'
+                                linkProjeto='https://incellsystem.vercel.app/'
                             />
 
                             <Cards 
@@ -141,11 +143,11 @@ export function Projetos(){
                         <>
                             <Cards 
                                 key={1}
-                                nomeProjeto='Projeto 1'
-                                descricaoProjeto='Lorem Ipsum is simply dummy text of the printing and typesetting.'
-                                srcProjeto={Photo}
+                                nomeProjeto='ADAC Church'
+                                descricaoProjeto='Destinado a uma igreja local da cidade onde apresenta a ideia da igreja focada em visão celular'
+                                srcProjeto={Project1}
                                 categoriaProjeto='Sites'
-                                linkProjeto='/'
+                                linkProjeto='https://adacchurch.vercel.app/'
                             />
 
                             <Cards 
@@ -163,11 +165,11 @@ export function Projetos(){
                         <>
                             <Cards 
                                 key={3}
-                                nomeProjeto='Projeto 3'
-                                descricaoProjeto='Lorem Ipsum is simply dummy text of the printing and typesetting.'
-                                srcProjeto={Photo}
+                                nomeProjeto='Incell System'
+                                descricaoProjeto='Sistema SaaS de gerenciamento para a igreja onde efetua relatórios, marca reuniões, deleta dados.'
+                                srcProjeto={Project3}
                                 categoriaProjeto='Sistemas'
-                                linkProjeto='/'
+                                linkProjeto='https://incellsystem.vercel.app/'
                             />
                         </>
                     )}
